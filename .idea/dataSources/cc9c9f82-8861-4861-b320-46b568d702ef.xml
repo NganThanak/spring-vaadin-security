@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12135</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-07-12.13:15:26.792</IntrospectionTimestamp>
+      <IntrospectionStateNumber>225003</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11320</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11321</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>11585</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="app_user_id_seq">
+      <ObjectId>886743</ObjectId>
+      <StateNumber>220660</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="10" parent="3" name="employee_emp_id_seq">
+      <ObjectId>115105</ObjectId>
+      <StateNumber>34394</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="11" parent="3" name="hibernate_sequence">
+      <ObjectId>886691</ObjectId>
+      <StateNumber>220635</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="12" parent="3" name="user_profile_id_seq">
+      <ObjectId>886767</ObjectId>
+      <StateNumber>220663</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="13" parent="3" name="userdetails_id_seq">
+      <ObjectId>903082</ObjectId>
+      <StateNumber>225003</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="14" parent="3" name="app_user">
+      <ObjectId>886745</ObjectId>
+      <StateNumber>220669</StateNumber>
+    </table>
+    <table id="15" parent="3" name="app_user_user_profile">
+      <ObjectId>886754</ObjectId>
+      <StateNumber>220669</StateNumber>
+    </table>
+    <table id="16" parent="3" name="book">
+      <ObjectId>715861</ObjectId>
+      <StateNumber>189222</StateNumber>
+    </table>
+    <table id="17" parent="3" name="employee">
+      <ObjectId>115107</ObjectId>
+      <StateNumber>34394</StateNumber>
+    </table>
+    <table id="18" parent="3" name="persistent_logins">
+      <ObjectId>886759</ObjectId>
+      <StateNumber>220662</StateNumber>
+    </table>
+    <table id="19" parent="3" name="role">
+      <ObjectId>903077</ObjectId>
+      <StateNumber>225002</StateNumber>
+    </table>
+    <table id="20" parent="3" name="user_profile">
+      <ObjectId>886769</ObjectId>
+      <StateNumber>220668</StateNumber>
+    </table>
+    <table id="21" parent="3" name="userdetails">
+      <ObjectId>903084</ObjectId>
+      <StateNumber>225003</StateNumber>
+    </table>
+    <table id="22" parent="3" name="w_employee">
+      <ObjectId>886684</ObjectId>
+      <StateNumber>220633</StateNumber>
+    </table>
+    <column id="23" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220660</StateNumber>
+      <DefaultExpression>nextval(&apos;app_user_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="24" parent="14" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220660</StateNumber>
+    </column>
+    <column id="25" parent="14" name="first_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220660</StateNumber>
+    </column>
+    <column id="26" parent="14" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220660</StateNumber>
+    </column>
+    <column id="27" parent="14" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220660</StateNumber>
+    </column>
+    <column id="28" parent="14" name="sso_id">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220660</StateNumber>
+    </column>
+    <index id="29" parent="14" name="app_user_pkey">
+      <ObjectId>886752</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="30" parent="14" name="uk_hqk6uc88j3imq8u9jhro36vt3">
+      <ObjectId>886775</ObjectId>
+      <ColNames>sso_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="14" name="app_user_pkey">
+      <ObjectId>886753</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>app_user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="32" parent="14" name="uk_hqk6uc88j3imq8u9jhro36vt3">
+      <ObjectId>886776</ObjectId>
+      <ColNames>sso_id</ColNames>
+      <UnderlyingIndexName>uk_hqk6uc88j3imq8u9jhro36vt3</UnderlyingIndexName>
+    </key>
+    <column id="33" parent="15" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220661</StateNumber>
+    </column>
+    <column id="34" parent="15" name="user_profile_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220661</StateNumber>
+    </column>
+    <index id="35" parent="15" name="app_user_user_profile_pkey">
+      <ObjectId>886757</ObjectId>
+      <ColNames>user_id
+user_profile_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="15" name="app_user_user_profile_pkey">
+      <ObjectId>886758</ObjectId>
+      <ColNames>user_id
+user_profile_id</ColNames>
+      <UnderlyingIndexName>app_user_user_profile_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="15" name="fk_brmce0t584euix4wb4rursf1q">
+      <ObjectId>886788</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableName>app_user</RefTableName>
+      <RefKeyName>app_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="38" parent="15" name="fk_gs2lq4vmukguubh36utd4r2cl">
+      <ObjectId>886783</ObjectId>
+      <ColNames>user_profile_id</ColNames>
+      <RefTableName>user_profile</RefTableName>
+      <RefKeyName>user_profile_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="39" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="40" parent="16" name="authors">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="41" parent="16" name="code">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="42" parent="16" name="isbn">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="43" parent="16" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="44" parent="16" name="price">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="45" parent="16" name="published_date">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <column id="46" parent="16" name="publisher">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>189222</StateNumber>
+    </column>
+    <index id="47" parent="16" name="book_pkey">
+      <ObjectId>715867</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="16" name="book_pkey">
+      <ObjectId>715868</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>book_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="17" name="emp_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>34394</StateNumber>
+      <DefaultExpression>nextval(&apos;employee_emp_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="50" parent="17" name="emp_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <StateNumber>34394</StateNumber>
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+    </column>
+    <column id="51" parent="17" name="emp_hire_date">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <StateNumber>34394</StateNumber>
+      <DefaultExpression>NULL::character varying</DefaultExpression>
+    </column>
+    <column id="52" parent="17" name="emp_salary">
+      <Position>4</Position>
+      <DataType>numeric(11,4)|0</DataType>
+      <StateNumber>34394</StateNumber>
+      <DefaultExpression>NULL::numeric</DefaultExpression>
+    </column>
+    <column id="53" parent="18" name="series">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220662</StateNumber>
+    </column>
+    <column id="54" parent="18" name="last_used">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>220662</StateNumber>
+    </column>
+    <column id="55" parent="18" name="token">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220662</StateNumber>
+    </column>
+    <column id="56" parent="18" name="username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220662</StateNumber>
+    </column>
+    <index id="57" parent="18" name="persistent_logins_pkey">
+      <ObjectId>886765</ObjectId>
+      <ColNames>series</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="58" parent="18" name="uk_3gq9wkitbp2ave684iu50mhn7">
+      <ObjectId>886777</ObjectId>
+      <ColNames>token</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="59" parent="18" name="uk_a6c251uovnx2cp2c3vv2dentk">
+      <ObjectId>886779</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="18" name="persistent_logins_pkey">
+      <ObjectId>886766</ObjectId>
+      <ColNames>series</ColNames>
+      <UnderlyingIndexName>persistent_logins_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="61" parent="18" name="uk_3gq9wkitbp2ave684iu50mhn7">
+      <ObjectId>886778</ObjectId>
+      <ColNames>token</ColNames>
+      <UnderlyingIndexName>uk_3gq9wkitbp2ave684iu50mhn7</UnderlyingIndexName>
+    </key>
+    <key id="62" parent="18" name="uk_a6c251uovnx2cp2c3vv2dentk">
+      <ObjectId>886780</ObjectId>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>uk_a6c251uovnx2cp2c3vv2dentk</UnderlyingIndexName>
+    </key>
+    <column id="63" parent="19" name="role_id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>225002</StateNumber>
+    </column>
+    <column id="64" parent="19" name="role">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>225002</StateNumber>
+    </column>
+    <index id="65" parent="19" name="role_pkey">
+      <ObjectId>903080</ObjectId>
+      <ColNames>role_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="19" name="role_pkey">
+      <ObjectId>903081</ObjectId>
+      <ColNames>role_id</ColNames>
+      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220663</StateNumber>
+      <DefaultExpression>nextval(&apos;user_profile_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="68" parent="20" name="type">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220663</StateNumber>
+    </column>
+    <index id="69" parent="20" name="user_profile_pkey">
+      <ObjectId>886773</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="20" name="uk_cva7m2blp7ekclxworqxau1l7">
+      <ObjectId>886781</ObjectId>
+      <ColNames>type</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="20" name="user_profile_pkey">
+      <ObjectId>886774</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>user_profile_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="72" parent="20" name="uk_cva7m2blp7ekclxworqxau1l7">
+      <ObjectId>886782</ObjectId>
+      <ColNames>type</ColNames>
+      <UnderlyingIndexName>uk_cva7m2blp7ekclxworqxau1l7</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>225003</StateNumber>
+      <DefaultExpression>nextval(&apos;userdetails_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="74" parent="21" name="address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>225003</StateNumber>
+    </column>
+    <column id="75" parent="21" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>225003</StateNumber>
+    </column>
+    <column id="76" parent="21" name="name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>225003</StateNumber>
+    </column>
+    <column id="77" parent="21" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>225003</StateNumber>
+    </column>
+    <index id="78" parent="21" name="userdetails_pkey">
+      <ObjectId>903091</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="79" parent="21" name="userdetails_pkey">
+      <ObjectId>903092</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>userdetails_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="80" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220633</StateNumber>
+    </column>
+    <column id="81" parent="22" name="joining_date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220633</StateNumber>
+    </column>
+    <column id="82" parent="22" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220633</StateNumber>
+    </column>
+    <column id="83" parent="22" name="salary">
+      <Position>4</Position>
+      <DataType>numeric(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220633</StateNumber>
+    </column>
+    <column id="84" parent="22" name="ssn">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>220633</StateNumber>
+    </column>
+    <index id="85" parent="22" name="w_employee_pkey">
+      <ObjectId>886687</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="86" parent="22" name="uk_1b514v9auaqbrk6otn6gtvvht">
+      <ObjectId>886689</ObjectId>
+      <ColNames>ssn</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="22" name="w_employee_pkey">
+      <ObjectId>886688</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>w_employee_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="88" parent="22" name="uk_1b514v9auaqbrk6otn6gtvvht">
+      <ObjectId>886690</ObjectId>
+      <ColNames>ssn</ColNames>
+      <UnderlyingIndexName>uk_1b514v9auaqbrk6otn6gtvvht</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
